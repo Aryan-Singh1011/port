@@ -1924,3 +1924,106 @@ footer{
     }
 
 }
+/*========================================
+        ROTATING RING
+========================================*/
+
+.loader-logo{
+
+    position:relative;
+
+    overflow:visible;
+
+}
+
+.loader-logo span{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+.loader-ring{
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    border:3px solid transparent;
+
+    border-top:3px solid #5db9ee;
+
+    border-right:3px solid #3877ff;
+
+    animation:ringRotate 2s linear infinite;
+
+}
+
+.loader-ring::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:10px;
+
+    border-radius:50%;
+
+    border:2px solid transparent;
+
+    border-bottom:2px solid #5db9ee;
+
+    animation:ringRotateReverse 1.5s linear infinite;
+
+}
+
+@keyframes ringRotate{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes ringRotateReverse{
+
+    from{
+
+        transform:rotate(360deg);
+
+    }
+
+    to{
+
+        transform:rotate(0deg);
+
+    }
+
+}
+
+/* Premium Fade */
+
+#loader.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    filter:blur(12px);
+
+    transform:scale(1.05);
+
+}
