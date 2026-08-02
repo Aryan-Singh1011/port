@@ -6,7 +6,7 @@ const words = [
     "Software Developer",
     "Web Developer",
     "Problem Solver",
-    "Continuous Learner"
+    "Cyber Security Enthusiast"
 ];
 
 const typingText = document.querySelector(".typing-text");
@@ -360,3 +360,180 @@ console.log("%cThanks for visiting my portfolio.",
 console.log("%cBuilt with HTML, CSS & JavaScript",
 
 "color:#5db9ee;font-size:13px;");
+
+/*=========================================
+        PREMIUM INTRO LOADER
+=========================================*/
+
+window.addEventListener("load", () => {
+
+    const loader = document.getElementById("loader");
+
+    const main = document.getElementById("main-content");
+
+    const loaderText = document.getElementById("loader-text");
+
+    const status = document.querySelector(".loader-status");
+
+const steps = [
+
+["Initializing Portfolio...","Please wait..."],
+
+["Building Experiences...","Loading UI Components..."],
+
+["Loading Projects...","Projects Ready ✓"],
+
+["Loading Skills...","Skills Ready ✓"],
+
+["Preparing Resume...","Resume Ready ✓"],
+
+["Connecting Contact...","Contact Ready ✓"],
+
+["Almost There...","Open to Opportunities 🟢"],
+
+["Welcome Recruiter 👋","Enjoy Your Visit"]
+
+];
+
+    let i = 0;
+
+    const interval = setInterval(() => {
+
+        if (i < steps.length) {
+
+            loaderText.textContent = steps[i][0];
+
+            status.textContent = steps[i][1];
+
+            i++;
+
+        }
+
+    }, 450);
+
+    setTimeout(() => {
+
+        clearInterval(interval);
+
+        loader.classList.add("hide");
+
+        main.classList.add("show");
+
+    }, 3600);
+
+});
+
+
+/*=========================================
+      RESUME BUTTON HOVER
+=========================================*/
+
+const resumeText = document.querySelector(".resume-text");
+
+if (resumeText) {
+
+    resumeText.parentElement.addEventListener("mouseenter", () => {
+
+        resumeText.innerHTML = "View Resume 📄";
+
+    });
+
+    resumeText.parentElement.addEventListener("mouseleave", () => {
+
+        resumeText.innerHTML = "Download Resume";
+
+    });
+
+}
+
+
+/*=========================================
+      HERO ENTRY ANIMATION
+=========================================*/
+
+window.addEventListener("load",()=>{
+
+    const hero=document.querySelector(".hero");
+
+    hero.animate(
+
+        [
+
+            {
+
+                opacity:0,
+
+                transform:"translateY(40px)"
+
+            },
+
+            {
+
+                opacity:1,
+
+                transform:"translateY(0)"
+
+            }
+
+        ],
+
+        {
+
+            duration:900,
+
+            delay:2600,
+
+            fill:"forwards"
+
+        }
+
+    );
+
+});
+
+
+/*=========================================
+        CONSOLE MESSAGE
+=========================================*/
+
+setTimeout(()=>{
+
+console.clear();
+
+console.log("%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+
+"color:#5db9ee;font-size:14px;");
+
+console.log("%cWelcome Recruiter 👋",
+
+"color:#5db9ee;font-size:22px;font-weight:bold;");
+
+console.log("%cPortfolio Loaded Successfully",
+
+"color:white;font-size:15px;");
+
+console.log("%cProjects Loaded ✓",
+
+"color:#00ff88;font-size:14px;");
+
+console.log("%cResume Ready ✓",
+
+"color:#00ff88;font-size:14px;");
+
+console.log("%cContact Available ✓",
+
+"color:#00ff88;font-size:14px;");
+
+console.log("%cStatus : Open to Opportunities",
+
+"color:#FFD700;font-size:15px;");
+
+console.log("%cThank you for visiting my portfolio ❤️",
+
+"color:#5db9ee;font-size:15px;");
+
+console.log("%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+
+"color:#5db9ee;font-size:14px;");
+
+},2800);
