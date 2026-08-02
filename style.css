@@ -509,9 +509,9 @@ header{
 
     background:url("hero.png");
 
-    background-size:cover 15%;
+    background-size:cover;
 
-    background-position:center;
+    background-position:center 15%;
 
     border:8px solid white;
 
