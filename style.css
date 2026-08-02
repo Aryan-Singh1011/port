@@ -509,7 +509,7 @@ header{
 
     background:url("hero.png");
 
-    background-size:cover;
+    background-size:cover 15%;
 
     background-position:center;
 
@@ -2045,5 +2045,103 @@ footer{
     filter:blur(12px);
 
     transform:scale(1.05);
+
+}
+
+/*========================================
+        PROJECT BROWSER MOCKUP
+========================================*/
+
+.project-image{
+
+    padding:20px;
+
+    background:#1b1b1b;
+
+}
+
+.browser{
+
+    width:100%;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    background:#fff;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+
+    transition:.4s;
+
+}
+
+.browser-top{
+
+    height:34px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:0 15px;
+
+    background:#ececec;
+
+}
+
+.browser-top span{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+}
+
+.red{
+
+    background:#ff5f57;
+
+}
+
+.yellow{
+
+    background:#ffbd2f;
+
+}
+
+.green{
+
+    background:#28c840;
+
+}
+
+.browser img{
+
+    width:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+.project-card:hover .browser{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 45px rgba(56,119,255,.25);
+
+}
+
+.project-card:hover .browser img{
+
+    transform:scale(1.03);
 
 }
